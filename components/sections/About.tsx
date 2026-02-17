@@ -15,6 +15,20 @@ export default function About() {
                 }}
             >
                 <div className="card">
+                    <div style={{
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '1.5rem',
+                        fontSize: '2rem',
+                        boxShadow: '0 8px 20px rgba(59, 130, 246, 0.25)',
+                    }}>
+                        🏢
+                    </div>
                     <h3 style={{ fontFamily: 'var(--font-bebas)', fontSize: '1.75rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
                         Who We Are
                     </h3>
@@ -24,6 +38,20 @@ export default function About() {
                 </div>
 
                 <div className="card">
+                    <div style={{
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #F2C94C 0%, #D4A42C 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '1.5rem',
+                        fontSize: '2rem',
+                        boxShadow: '0 8px 20px rgba(242, 201, 76, 0.25)',
+                    }}>
+                        🎯
+                    </div>
                     <h3 style={{ fontFamily: 'var(--font-bebas)', fontSize: '1.75rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
                         Our Vision
                     </h3>
@@ -33,6 +61,20 @@ export default function About() {
                 </div>
 
                 <div className="card">
+                    <div style={{
+                        width: '70px',
+                        height: '70px',
+                        background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                        borderRadius: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginBottom: '1.5rem',
+                        fontSize: '2rem',
+                        boxShadow: '0 8px 20px rgba(16, 185, 129, 0.25)',
+                    }}>
+                        🚀
+                    </div>
                     <h3 style={{ fontFamily: 'var(--font-bebas)', fontSize: '1.75rem', marginBottom: '1rem', letterSpacing: '0.05em' }}>
                         Our Mission
                     </h3>

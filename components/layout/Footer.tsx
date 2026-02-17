@@ -7,8 +7,7 @@ export default function Footer() {
         <footer
             style={{
                 background: 'var(--card-bg)',
-                borderTop: '2px solid',
-                borderImage: 'linear-gradient(90deg, var(--copper), var(--copper-light)) 1',
+                borderTop: '2px solid var(--primary)',
                 marginTop: '4rem',
             }}
         >
@@ -37,21 +36,15 @@ export default function Footer() {
                                 marginBottom: '1rem',
                             }}
                         >
-                            <div
+                            <img
+                                src="/logo.png?v=4"
+                                alt="TSV"
                                 style={{
-                                    width: '32px',
-                                    height: '32px',
-                                    background: 'linear-gradient(135deg, var(--copper), var(--copper-light))',
-                                    borderRadius: '6px',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    fontSize: '1.25rem',
-                                    color: 'var(--off-white)',
+                                    width: '50px',
+                                    height: '50px',
+                                    objectFit: 'contain',
                                 }}
-                            >
-                                ★
-                            </div>
+                            />
                             <span
                                 style={{
                                     fontFamily: 'var(--font-bebas)',
@@ -113,7 +106,7 @@ export default function Footer() {
                         </h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                             <a
-                                href="https://wa.me/0000000000"
+                                href="https://wa.me/966505447209"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{
@@ -125,10 +118,10 @@ export default function Footer() {
                                     gap: '0.5rem',
                                 }}
                             >
-                                <span>📱</span> WhatsApp: +000 000 0000
+                                <span>📱</span> WhatsApp: +966 050 544 7209
                             </a>
                             <a
-                                href="tel:+0000000000"
+                                href="tel:+966505447209"
                                 style={{
                                     color: 'var(--muted)',
                                     textDecoration: 'none',
@@ -138,7 +131,7 @@ export default function Footer() {
                                     gap: '0.5rem',
                                 }}
                             >
-                                <span>📞</span> Phone: +000 000 0000
+                                <span>📞</span> Phone: +966 050 544 7209
                             </a>
                             <p
                                 style={{
@@ -150,7 +143,7 @@ export default function Footer() {
                                     margin: 0,
                                 }}
                             >
-                                <span>✉️</span> info@truestarventures.com
+                                <span>✉️</span> info@tsv.com.sa
                             </p>
                         </div>
                     </div>

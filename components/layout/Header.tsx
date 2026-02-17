@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -58,24 +57,19 @@ export default function Header() {
                         cursor: 'pointer',
                     }}
                     onClick={() => scrollToSection('hero')}
+                    className="logo-container"
                 >
-                    <div
+                    <img
+                        src="/logo.png?v=4"
+                        alt="TRUE STAR VENTURES"
                         style={{
-                            width: '42px',
-                            height: '42px',
-                            background: 'linear-gradient(135deg, var(--primary), var(--primary-dark))',
-                            borderRadius: '10px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '1.4rem',
-                            fontWeight: 'bold',
-                            color: 'white',
-                            boxShadow: '0 4px 12px rgba(0, 51, 102, 0.25)',
+                            width: '60px',
+                            height: '60px',
+                            objectFit: 'contain',
+                            transition: 'transform 0.4s ease',
                         }}
-                    >
-                        ★
-                    </div>
+                        className="logo-image"
+                    />
                     <span
                         style={{
                             fontFamily: 'var(--font-bebas)',
@@ -124,7 +118,7 @@ export default function Header() {
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <a
-                            href="https://wa.me/0000000000"
+                            href="https://wa.me/966505447209"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary"
@@ -136,7 +130,7 @@ export default function Header() {
                             WhatsApp
                         </a>
                         <a
-                            href="tel:+0000000000"
+                            href="tel:+966505447209"
                             className="btn-secondary"
                             style={{
                                 fontSize: '0.85rem',
@@ -145,7 +139,7 @@ export default function Header() {
                         >
                             Call Us
                         </a>
-                        <ThemeToggle />
+
                     </div>
                 </div>
 
@@ -220,15 +214,12 @@ export default function Header() {
                             </button>
                         ))}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '2rem', width: '100%', maxWidth: '300px' }}>
-                            <a href="https://wa.me/0000000000" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textAlign: 'center' }}>
+                            <a href="https://wa.me/966505447209" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ textAlign: 'center' }}>
                                 WhatsApp
                             </a>
-                            <a href="tel:+0000000000" className="btn-secondary" style={{ textAlign: 'center' }}>
+                            <a href="tel:+966505447209" className="btn-secondary" style={{ textAlign: 'center' }}>
                                 Call Us
                             </a>
-                        </div>
-                        <div style={{ marginTop: '2rem' }}>
-                            <ThemeToggle />
                         </div>
                     </div>
                 </div>
@@ -238,6 +229,10 @@ export default function Header() {
         @media (max-width: 1024px) {
             .desktop-nav { display: none !important; }
             .mobile-menu-btn { display: flex !important; align-items: center; justify-content: center; }
+        }
+
+        .logo-container:hover .logo-image {
+            transform: rotate(5deg) scale(1.05);
         }
 
         .nav-link::after {
