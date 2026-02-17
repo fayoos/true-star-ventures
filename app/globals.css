@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+/* ===== CSS VARIABLES FOR VIBRANT PROFESSIONAL THEME ===== */
+:root {
+  /* Vibrant Professional Palette */
+  --background: #FFFFFF;
+  /* Clean White */
+  --foreground: #003366;
+  /* Deep Royal Blue */
+
+  /* Primary Brand Colors */
+  --primary: #003366;
+  /* Royal Blue */
+  --primary-light: #336699;
+  --primary-dark: #002244;
+
+  /* Accent Colors */
+  --accent: #F2C94C;
+  /* Solar Gold - Vibrant & Premium */
+  --accent-secondary: #00A896;
+  /* Electric Teal - Modern Tech feel */
+  --accent-tertiary: #6C63FF;
+  /* Vivid Purple for subtle highlights */
+
+  /* Neutral Tones */
+  --muted: #64748B;
+  /* Cool Slate Grey */
+  --card-bg: #FFFFFF;
+  --card-border: #E2E8F0;
+  /* Light Slate Border */
+
+  /* Effects */
+  --glass: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow-soft: 0 10px 30px -10px rgba(0, 51, 102, 0.1);
+  --shadow-elevated: 0 20px 40px -10px rgba(0, 51, 102, 0.15);
+
+  /* Typography Variables */
+  /* These map to the fonts loaded in layout.tsx */
+  /* --font-bebas is defined via Tailwind theme usually, or we can force it here */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-muted: var(--muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+
+  /* Typography */
+  --font-bebas: var(--font-bebas), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-crimson: var(--font-crimson), serif;
+}
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  /* Subtle mesh gradient background for vibrancy */
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(0, 168, 150, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(242, 201, 76, 0.03) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bebas), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 65ch;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.section {
+  position: relative;
+  padding: 6rem 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Glass Panel - Modern Tech Feel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Cards - Clean, Rounded, Uplifting */
+.card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-elevated);
+  border-color: var(--primary-light);
+}
+
+/* Buttons - Vibrant & Professional */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  /* Slightly rounded for modern feel */
+  font-family: var(--font-bebas);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary);
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-family: var(--font-bebas);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 51, 102, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Section Headings */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  /* Starts hidden */
+}
